@@ -1,0 +1,332 @@
+/*
+====================================
+1. RESET BÁSICO Y VARIABLES
+====================================
+*/
+:root {
+    --color-principal: #0077B6; /* Azul de ingeniería/tecnología */
+    --color-secundario: #48CAE4; /* Azul claro para acentos */
+    --color-fondo: #F8F8F8; /* Gris muy claro, casi blanco */
+    --color-texto-principal: #333333; /* Gris oscuro para el cuerpo del texto */
+    --color-texto-claro: #FFFFFF;
+    --fuente-titulo: 'Roboto', sans-serif;
+    --fuente-cuerpo: 'Open Sans', sans-serif;
+    --espaciado-seccion: 80px;
+}
+
+/* Importa fuentes de Google Fonts (debes añadir estos enlaces en el <head> de tu HTML) */
+/*
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    line-height: 1.6;
+    color: var(--color-texto-principal);
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Limita el ancho máximo del contenido para mejorar la lectura */
+main {
+    max-width: 1100px;
+    width: 90%;
+}
+
+/*
+====================================
+2. TIPOGRAFÍA Y ENLACES
+====================================
+*/
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulo);
+    color: var(--color-principal);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.25em; }
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--color-principal);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-secundario);
+    text-decoration: underline;
+}
+
+/*
+====================================
+3. CABECERA (HEADER) Y NAVEGACIÓN (NAV)
+====================================
+*/
+header {
+    background-color: var(--color-texto-claro);
+    width: 100%;
+    border-bottom: 1px solid #E0E0E0;
+    position: sticky; /* Fija la cabecera al hacer scroll */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+header nav {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 25px;
+}
+
+header ul a {
+    color: var(--color-texto-principal);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+header ul a:hover {
+    color: var(--color-principal);
+}
+
+
+/*
+====================================
+4. BOTONES
+====================================
+*/
+.btn-principal, .btn-secundario {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-principal {
+    background-color: var(--color-principal);
+    color: var(--color-texto-claro);
+    border: 2px solid var(--color-principal);
+}
+
+.btn-principal:hover {
+    background-color: #005A90; /* Un tono más oscuro */
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/*
+====================================
+5. SECCIONES GENERALES
+====================================
+*/
+section {
+    padding: var(--espaciado-seccion) 0;
+}
+
+/* Aplica un color de fondo diferente para algunas secciones para contraste */
+#sobre-mi, #habilidades {
+    background-color: var(--color-texto-claro);
+}
+
+/*
+====================================
+6. SECCIÓN HERO (PRINCIPAL)
+====================================
+*/
+#hero {
+    min-height: 50vh; /* Ocupa al menos la mitad de la altura de la ventana */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 0; /* No necesitamos doble espaciado */
+}
+
+#hero h2 {
+    font-size: 3em;
+    color: var(--color-texto-principal);
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.25em;
+    max-width: 600px;
+}
+
+/*
+====================================
+7. SECCIÓN PROYECTOS
+====================================
+*/
+#proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+#proyectos h3 {
+    grid-column: 1 / -1; /* Hace que el título ocupe todo el ancho */
+}
+
+.proyecto-card {
+    background-color: var(--color-texto-claro);
+    padding: 25px;
+    border-left: 5px solid var(--color-principal);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto-card h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.proyecto-card a {
+    margin-right: 15px;
+    font-size: 0.9em;
+}
+
+/*
+====================================
+8. SECCIÓN HABILIDADES
+====================================
+*/
+.habilidades-lista {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap; /* Permite que las listas se apilen en móviles */
+}
+
+.habilidades-lista h4 {
+    color: var(--color-texto-principal);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--color-secundario);
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.habilidades-lista ul {
+    list-style: none;
+    flex: 1; /* Ocupa el espacio disponible */
+    min-width: 250px;
+}
+
+.habilidades-lista ul li {
+    padding: 5px 0;
+}
+
+/*
+====================================
+9. SECCIÓN CONTACTO
+====================================
+*/
+#contacto address {
+    margin-top: 20px;
+    font-style: normal;
+    font-size: 1.1em;
+}
+
+#contacto address p {
+    margin-bottom: 10px;
+}
+
+/*
+====================================
+10. PIE DE PÁGINA (FOOTER)
+====================================
+*/
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    background-color: var(--color-principal);
+    color: var(--color-texto-claro);
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--color-secundario);
+}
+
+/*
+====================================
+11. MEDIA QUERIES (Móviles)
+====================================
+*/
+@media (max-width: 768px) {
+    /* Ajustes generales para pantallas pequeñas */
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.75em; }
+    section { padding: 40px 0; }
+
+    /* Navegación */
+    header nav {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    header h1 {
+        margin-bottom: 10px;
+    }
+    header ul {
+        justify-content: center;
+        width: 100%;
+    }
+    header ul li {
+        margin: 0 10px;
+    }
+
+    /* Hero */
+    #hero {
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Habilidades */
+    .habilidades-lista {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
