@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head><!--Es la primera parte de la pagina web-->
     <title>Hugo Miracaro | Portfolio - Ingeniería e IA</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link rel es para indicar que tipo de hoja es es el 'documento'style es una hoja de estilos.    Href es para indicar el nombre.   style es para editar el tipo de letra, espacios...-->
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"><!--Link rel es para indicar de que tipo va a ser, icono en este caso.    href para indicar el icono que es-->
 
 </head>
-<body>
+<body><!--Es la segunda parte de la pagina web-->
 
-    <header id="inicio">
-        <nav>
-            <h1>Hugo Miracaro</h1>
-            <ul>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
+    <header id="inicio"> <!--Como un menu horizontal, cabecera-->
+        <nav> <!--Es como un estilo para darle al header-->
+            <h1>Hugo Mira Caro</h1> <!--Tipo de letra, h1 es la mas grande y la más pequeña es hasta h6 o h8-->
+            <ul> <!--para abrir una lista-->
+                <li><a href="#sobre-mi">Sobre Mí</a></li>  <!--Lo de href es para que cuando en la pagina web pinchemos sobre ese titulo nos lleve a donde esta desarollado-->
+                <li><a href="#proyectos">Proyectos</a></li> <!--li a es para indicar un tipo de letra-->
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="hero">
-            <div>
+    <main> <!--Contenido del cuerpo-->
+        <section id="hero"><!--Para dividir la pagina por secciones, id es para  ponerle el nombre-->
+            <div> <!--Es como una seccion-->
                 <h2>Ingeniería Industrial & IA</h2>
-                <p>Estudiante apasionado por la **optimización de sistemas** y la aplicación de la **Inteligencia Artificial** para resolver problemas industriales complejos.</p>
-                <a href="#proyectos" class="btn-principal">Ver Proyectos Destacados</a>
+                <p>Estudiante apasionado por la **optimización de sistemas** y la aplicación de la **Inteligencia Artificial** para resolver problemas industriales complejos.</p> <!--Las p solo sirven para escribir-->
+                <a href="#proyectos" class="btn-principal">Ver Proyectos Destacados</a> <!--las 'a' se pueden pincher y que te lleven a algub sitio-->
             </div>
             </section>
 
@@ -43,7 +43,7 @@
 
         <section id="proyectos">
             <h3>Proyectos</h3>
-            <article class="proyecto-card">
+            <article class="proyecto-card"> <!--Para meter articulos, en este caso como un contenedor pero con otro estilo-->
                 <h4>Optimización de Rutas Logísticas con Algoritmos Genéticos</h4>
                 <p>Desarrollo de un modelo en Python que utiliza IA para minimizar los tiempos y costos de distribución en una cadena de suministro simulada.</p>
                 <a href="#" target="_blank">Ver en GitHub</a> | <a href="#">Ver Demo</a>
