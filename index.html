@@ -1,99 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
 <head><!--Es la primera parte de la pagina web-->
-    <title>Hugo Miracaro | Portfolio - Ingeniería e IA</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css"> <!-- Link rel es para indicar que tipo de hoja es es el 'documento'style es una hoja de estilos.    Href es para indicar el nombre.   style es para editar el tipo de letra, espacios...-->
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon"><!--Link rel es para indicar de que tipo va a ser, icono en este caso.    href para indicar el icono que es-->
-
+     <title>Ainara | Educación Infantil y Primaria</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffe6f2 0%, #e0f7fa 100%); 
+        }
+        header {
+            background-color: #fff0f6;
+            border-bottom: 4px solid #f8bbd0;
+        }
+        h1, h2, h3 {
+            color: #d81b60;
+            font-family: 'Segoe Script', 'Roboto', cursive, sans-serif;
+        }
+        h1 {
+            font-size: 2.2em;
+        }
+        nav ul a {
+            color: #6a1b9a;
+        }
+        section {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(216,27,96,0.08);
+            margin-bottom: 30px;
+            padding: 30px 20px;
+        }
+        .presentacion {
+            background: #fce4ec;
+            border-left: 6px solid #d81b60;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .edad {
+            font-size: 1.1em;
+            color: #ad1457;
+            font-weight: bold;
+        }
+        .footer-edu {
+            background: #d1c4e9;
+            color: #6a1b9a;
+            padding: 20px 0;
+            border-radius: 0 0 16px 16px;
+        }
+    </style>
 </head>
-<body><!--Es la segunda parte de la pagina web-->
-
-    <header id="inicio"> <!--Como un menu horizontal, cabecera-->
+<body>
+    <header>
         <nav>
-            <div class="header-left">
-                <img src="foto-perfil.jpg" alt="Foto de Hugo" class="foto-circular">
-                <h1>Hugo Mira Caro</h1>
-            </div>
+            <h1>📚 Ainara</h1>
             <ul>
-                <li><a href="#sobre-mi">Sobre Mí</a></li><!--Li es para añadirlo a la lista y 'a' es un tipo de letra-->
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Experiencia</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
-
-    <main> <!--Contenido del cuerpo-->
-        <section id="hero"><!--Para dividir la pagina por secciones, id es para  ponerle el nombre-->
-            <div> <!--Es como una seccion-->
-                <h2>Ingeniería Industrial & IA</h2>
-                <p>Estudiante apasionado por la **optimización de sistemas** y la aplicación de la **Inteligencia Artificial** para resolver problemas industriales complejos.</p> <!--Las p solo sirven para escribir-->
-                <a href="#proyectos" class="btn-principal">Ver Proyectos Destacados</a> <!--las 'a' se pueden pincher y que te lleven a algub sitio-->
+    <main>
+        <section class="presentacion">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <img src="ainara-perfil.jpg" alt="Foto de Ainara" style="width:80px; height:80px; object-fit:cover; border-radius:50%; border:2px solid #d81b60; background:#fff;">
+                <div>
+                    <h2>¡Hola! Soy Ainara</h2>
+                    <p class="edad">19 años | Estudiante del Doble Grado de Educación Infantil y Primaria</p>
+                </div>
             </div>
-            </section>
-
+            <p>Soy una chica responsable y luchadora, apasionada por la educación y las matemáticas. Me encanta ayudar a mis alumnos a encontrar los mejores métodos de estudio y motivarles para que aprendan disfrutando.</p>
+        </section>
         <section id="sobre-mi">
             <h3>Sobre Mí</h3>
-            <p>Actualmente cursando Ingeniería Industrial, me especializo en la intersección de la eficiencia operativa y las tecnologías de vanguardia. Mi enfoque está en utilizar el **Machine Learning** y el **Análisis de Datos** para la toma de decisiones estratégicas, mejorando procesos y reduciendo costos en entornos de producción y logística.</p>
-            <p>Busco oportunidades para aplicar mis conocimientos teóricos en desafíos reales y contribuir a la **transformación digital** del sector industrial.</p>
-            </section>
-
-        <section id="proyectos">
-            <h3>Proyectos</h3>
-            <article class="proyecto-card"> <!--Para meter articulos, en este caso como un contenedor pero con otro estilo-->
-                <h4>Optimización de Rutas Logísticas con Algoritmos Genéticos</h4>
-                <p>Desarrollo de un modelo en Python que utiliza IA para minimizar los tiempos y costos de distribución en una cadena de suministro simulada.</p>
-                <a href="#" target="_blank">Ver en GitHub</a> | <a href="#">Ver Demo</a>
-            </article>
-
-            <article class="proyecto-card">
-                <h4>Mantenimiento Predictivo en Maquinaria</h4>
-                <p>Implementación de un sistema de clasificación basado en datos de sensores para predecir fallos de equipos antes de que ocurran, aumentando el tiempo de actividad.</p>
-                <a href="#" target="_blank">Ver en GitHub</a>
-            </article>
-
-            </section>
-
-        <section id="habilidades">
-            <h3>Habilidades Clave</h3>
-            <div class="habilidades-lista">
-                <h4>Ingeniería & Soft Skills</h4>
-                <ul>
-                    <li>Optimización de Procesos (Lean, Six Sigma)</li>
-                    <li>Simulación y Modelado de Sistemas</li>
-                    <li>Gestión de Proyectos</li>
-                    <li>Pensamiento Analítico y Crítico</li>
-                </ul>
-                <h4>Tecnología & IA</h4>
-                <ul>
-                    <li>**Lenguajes:** Python (Avanzado), SQL</li>
-                    <li>**IA/ML:** Scikit-learn, TensorFlow, PyTorch</li>
-                    <li>**Datos:** Pandas, NumPy, Visualización (Power BI, Matplotlib)</li>
-                    <li>**Otros:** Git, Docker (Básico)</li>
-                </ul>
-            </div>
+            <ul>
+                <li>Estudiante del Doble Grado de Educación Infantil y Primaria.</li>
+                <li>Apasionada por la enseñanza y el aprendizaje activo.</li>
+                <li>Especial interés en matemáticas y métodos innovadores de estudio.</li>
+            </ul>
         </section>
-
+        <section id="proyectos">
+            <h3>Experiencia</h3>
+            <ul>
+                <li>Profesora particular en Las Rozas de Madrid, impartiendo clases de inglés, matemáticas y otras asignaturas.</li>
+                <li>Colaboradora en Gader, realizando actividades extraescolares y lúdicas con niños por la tarde.</li>
+                <li>Comprometida con el desarrollo personal y académico de sus alumnos.</li>
+            </ul>
+        </section>
         <section id="contacto">
             <h3>Contacto</h3>
-            <p>¿Interesado en mi trabajo o en colaborar? ¡Hablemos!</p>
-            <address>
-                <p>Email: <a href="mailto:hugo.miracaro@email.com">hugo.miracaro@email.com</a></p>
-                <p>LinkedIn: <a href="[Tu LinkedIn]" target="_blank">linkedin.com/in/hugo-miracaro</a></p>
-                <p>GitHub: <a href="[Tu GitHub]" target="_blank">github.com/tu-usuario</a></p>
-            </address>
+            <p>Email: <a href="mailto:ainaraarubioo@gmail.com">ainaraarubioo@gmail.com</a></p>
+            <p>Teléfono: <a href="tel:+34 677 79 10 01">+34 677 79 10 01</a></p>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Hugo Miracaro | Construido con ❤️</p>
-    </footer>
+    <footer class="footer-edu">
+        <p>&copy; 2025 Ainara | Educación Infantil y Primaria</p>
+    </footer>  
 
 </body>
 </html>
