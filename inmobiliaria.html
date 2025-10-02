@@ -5,49 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            background: #184d47;
-            font-family: 'Merriweather', 'Georgia', serif;
-            color: #f5f5dc;
+        h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, label, input, textarea {
+            color: #111 !important;
+        }
+                body {
+                    background: #f5f6fa;
+                    font-family: 'Merriweather', 'Georgia', serif;
+                    color: #273c75;
         }
         .beige-bg {
-            background: #f5f5dc;
-            color: #184d47;
+            background: #ececec;
+            color: #273c75;
         }
-        header {
-            background: #800020;
-            color: #f5f5dc;
-            border-bottom: 4px solid #f5f5dc;
+                header {
+                    background: #273c75;
+                    color: #ffe082;
         }
         h1, h2, h3 {
-            color: #184d47;
+              color: #111;
         }
         nav ul li a {
-            color: #f5f5dc;
+              color: #111;
+            }
+            nav ul li a:hover {
+                color: #fff;
+                text-shadow: 0 0 8px #6b0f1a;
         }
-        nav ul li a:hover {
-            color: #f5f5dc;
-            text-shadow: 0 0 8px #184d47;
-        }
-        .presentacion, section {
-            background: #f5f5dc;
-            color: #184d47;
-            border-radius: 18px;
-            border: 2px solid #184d47;
-            box-shadow: 0 4px 16px rgba(24,77,71,0.10);
+                .presentacion, section {
+                    background: #fffbe6;
+                    color: #273c75;
+                    border-radius: 18px;
+                    border: 2px solid #ffe082;
+                    box-shadow: 0 4px 16px rgba(39,60,117,0.10);
         }
         .footer {
-            background: #184d47;
-            color: #f5f5dc;
+            background: #273c75;
+            color: #ffe082;
             border-radius: 0 0 18px 18px;
         }
         header {
-            background: linear-gradient(90deg, #388e3c 60%, #43a047 100%);
-            color: #fff;
+            background: #184d47;
+            color: #111;
             padding: 40px 0 25px 0;
             text-align: center;
-            border-bottom: 4px solid #ffd600;
-            box-shadow: 0 4px 16px rgba(56,142,60,0.12);
+            border-bottom: 4px solid #f5f5dc;
+            box-shadow: 0 4px 16px rgba(24,77,71,0.12);
         }
         h1 {
             font-size: 2.7em;
@@ -63,7 +65,7 @@
             gap: 40px;
         }
         nav ul li a {
-            color: #ffd600;
+            color: #ff000031;
             font-weight: 700;
             text-decoration: none;
             font-size: 1.15em;
@@ -104,8 +106,8 @@
             margin-bottom: 10px;
         }
         .footer {
-            background: linear-gradient(90deg, #388e3c 60%, #43a047 100%);
-            color: #ffd600;
+            background: #142810c0;
+            color: #11111100;
             text-align: center;
             padding: 24px 0;
             border-radius: 0 0 18px 18px;
@@ -127,10 +129,9 @@
         </nav>
     </header>
     <main>
-        <section class="presentacion">
-            <h2>Yolanda Amalia 
-                Aznar González</h2>
-            <p>Soy una profesional del sector inmobiliario con experiencia en seguros y otros sectores. Me considero una mujer valiente, luchadora y comprometida con lo que realmente quiero. Disfruto ayudando a los demás y me esfuerzo por hacer mi trabajo de la mejor manera posible, siempre con honestidad y dedicación.</p>
+        <section class="presentacion" style="background:#ececec; color:#23272a; border:2px solid #6b0f1a; border-radius:18px; margin:50px auto 35px auto; padding:32px 28px; max-width:750px; box-shadow:0 4px 16px rgba(107,15,26,0.10);">
+            <h2 style="color:#111;">Yolanda Amalia Aznar González</h2>
+            <p style="color:#111;">Soy una profesional del sector inmobiliario con experiencia en seguros y otros sectores. Me considero una mujer valiente, luchadora y comprometida con lo que realmente quiero. Disfruto ayudando a los demás y me esfuerzo por hacer mi trabajo de la mejor manera posible, siempre con honestidad y dedicación.</p>
         </section>
         <section id="sobre-mi" class="beige-bg" style="border:2px solid #184d47; border-radius:18px; margin-bottom:35px; padding:32px 28px; color:#184d47;">
             <h3>Sobre Mí</h3>
@@ -157,7 +158,48 @@
         </section>
     </main>
     <footer class="footer">
+        <section id="reseñas" class="beige-bg" style="border:2px solid #ececec; border-radius:18px; margin:35px auto; padding:32px 28px; max-width:750px;">
+            <h3>Reseñas</h3>
+            <p>¿Quieres dejar una reseña sobre Yolanda? Escribe tu opinión aquí:</p>
+            <form id="form-reseña">
+                <label for="nombre">Tu nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" style="margin-bottom:10px; width:100%; max-width:300px;"><br>
+                <label for="opinion">Reseña:</label><br>
+                <textarea id="opinion" name="opinion" rows="4" style="width:100%; max-width:500px; margin-bottom:10px;"></textarea><br>
+                <button type="submit" style="background:#273c75; color:#fff; border:none; padding:10px 20px; border-radius:8px; cursor:pointer;">Enviar</button>
+            </form>
+            <div id="lista-reseñas" style="margin-top:30px;"></div>
+            <p style="font-size:0.9em; color:#888; margin-top:10px;">*Las reseñas se guardan en tu navegador y se muestran automáticamente.</p>
+        </section>
         <p>&copy; 2025 Portfolio Inmobiliario | Mujer Valiente</p>
     </footer>
 </body>
+<script>
+// Mostrar reseñas guardadas
+function mostrarReseñas() {
+    const contenedor = document.getElementById('lista-reseñas');
+    const reseñas = JSON.parse(localStorage.getItem('reseñasYolanda') || '[]');
+    if (reseñas.length === 0) {
+        contenedor.innerHTML = '<p style="color:#888;">No hay reseñas aún.</p>';
+        return;
+    }
+    contenedor.innerHTML = reseñas.map(r => `<div style='background:#fffbe6; border:1px solid #ececec; border-radius:8px; margin-bottom:15px; padding:15px;'><strong>${r.nombre}</strong><br><span>${r.opinion}</span></div>`).join('');
+}
+
+// Guardar reseña
+document.getElementById('form-reseña').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nombre = document.getElementById('nombre').value.trim();
+    const opinion = document.getElementById('opinion').value.trim();
+    if (!nombre || !opinion) return;
+    const reseñas = JSON.parse(localStorage.getItem('reseñasYolanda') || '[]');
+    reseñas.unshift({nombre, opinion});
+    localStorage.setItem('reseñasYolanda', JSON.stringify(reseñas));
+    document.getElementById('form-reseña').reset();
+    mostrarReseñas();
+});
+
+// Inicializar
+mostrarReseñas();
+</script>
 </html>
